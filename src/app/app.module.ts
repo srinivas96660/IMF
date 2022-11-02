@@ -7,7 +7,9 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { Pagenotfound404pageComponent } from './components/pagenotfound404page/pagenotfound404page.component';
 import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule} from '@angular/common/http';
+import { StudentsComponent } from './components/students/students.component';
+import { AllStudentsComponent } from './components/all-students/all-students.component'
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { HttpClientModule} from '@angular/common/http'
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    Pagenotfound404pageComponent
+    Pagenotfound404pageComponent,
+    StudentsComponent,
+    AllStudentsComponent
    
    
     
