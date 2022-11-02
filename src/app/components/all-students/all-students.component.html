@@ -1,1 +1,47 @@
-<p>all-students works!</p>
+<table class="table table-sucess">
+    <thead>
+        <tr>
+            <th>createdAt:</th>
+            <th>name:</th>
+            <th>avatar:</th>
+            <th>id:</th>
+            <th>gender:</th>
+            <th>mobile:</th>
+            <th>email:</th>
+            <th>batch:</th>
+            <th>city:</th>
+            <th>mandal  :</th>
+            <th>district:</th>
+            <th>pincode:</th>
+            <th>qualification:</th>
+            <th>year:</th>
+            <th>location:</th>
+            <th>package:</th>
+            <th>offerDate:</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+            <td>{{student.createdAt}}</td>
+            <td>{{student.name}}</td>
+            <td>
+                <img src='{{student.avatar}}' width="100px" height="100px">
+            </td>
+            <td>{{student.id}}</td>
+            <td>{{student.gender}}</td>
+            <td>{{student.mobile}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.batch}}</td>
+            <td>{{student.address.city}}</td>
+            <td>{{student.address.mandal }}</td>
+            <td>{{student.address.district}}</td>
+            <td>{{student.address.pincode}}</td>
+            <td>{{student.company.qualification}}</td>
+            <td>{{student.company.year}}</td>
+            <td>{{student.company.location}}</td>
+            <td>{{student.company.package}}</td>
+            <td>{{student.company.offerDate}}</td>
+            <td>{{student.sourceType}}</td>
+        </tr>
+    </tbody>
+</table>
