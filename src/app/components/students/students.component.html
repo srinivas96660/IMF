@@ -1,1 +1,33 @@
-<h1>khgggggggggggggggggggggggg</h1>
+<div class="main">
+    <form class="form-control" [formGroup]="studentForm">
+        <label>Name:</label>
+        <input type="text" placeholder="Name" formControlName="name">
+        <div class="error" *ngIf="studentForm.get('name')?.touched && studentForm.get('name')?.invalid">
+            <p *ngIf="studentForm.get('name')?.errors?.['required']">This Field required</p>
+            <p *ngIf="studentForm.get('name')?.errors?.['minlength']">min 3 char are required</p>
+            <p *ngIf="studentForm.get('name')?.errors?.['maxlength']">max 10 char are required</p>
+
+
+
+        </div>
+        <br>
+        <br>
+        <label>Gender:</label>
+        <input type="radio" name="gender">
+        <label>Male:</label>
+        <input type="radio" name="gender">
+        <label>Female:</label>
+        <br>
+        <br>
+        <label>Mobile:</label >
+        <input type="number" placeholder="Mobile" formControlName="mobile">
+        <br>
+        <br>
+        <label>Emaiil:</label>
+        <input type="email" placeholder="Email" formControlName="email">
+        <br>
+        <br>
+        <label>Batch:</label>
+        <input type="text" placeholder="Batch" formControlName="batch">
+    </form>
+</div>
