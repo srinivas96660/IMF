@@ -7,6 +7,7 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { Pagenotfound404pageComponent } from './components/pagenotfound404page/pagenotfound404page.component';
 import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http'
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
     
     
   ],

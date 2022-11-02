@@ -1,14 +1,14 @@
 <div class="container">
     <div class="col-12 col-sm-6 col-md-3">
-        <form  [formGroup]='login' class="form-control" id="lg" >
+        <form  [formGroup]='loginform' class="form-control" id="lg" >
 
             <h2>Login Form</h2>
             <br>
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter email" name="email">
-                <div class="error" *ngIf="login.get('email')?.touched && login.get('email')?.invalid">
-                    <p *ngIf="login.get('email')?.errors?.['required']">This Fileld Is required</p>
+                <div class="error" *ngIf="loginform.get('email')?.touched && loginform.get('email')?.invalid">
+                    <p *ngIf="loginform.get('email')?.errors?.['required']">This Fileld Is required</p>
 
                 </div>
             </div>
@@ -17,13 +17,13 @@
             <div class="form-group">
                 <label for="pwd">Password:</label>
                 <input type="password" class="form-control" id="pwd" formControlName="password" placeholder="Enter password" name="pswd">
-                <div class="error" *ngIf="login.get('password')?.touched && login.get('password')?.invalid">
-                    <p *ngIf="login.get('password')?.errors?.['required']">This is field is required</p>
+                <div class="error" *ngIf="loginform.get('password')?.touched && loginform.get('password')?.invalid">
+                    <p *ngIf="loginform.get('password')?.errors?.['required']">This is field is required</p>
                 </div>
                 
             </div>
             <br>
-            <button class=" btn btn-primary">Login</button>
+            <button class=" btn btn-primary" (click)="login()">Login</button>
         </form>
     </div>
 </div>
