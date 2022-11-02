@@ -14,6 +14,12 @@ export class StudentsComponent implements OnInit {
       mobile:new FormControl(null, [Validators.required, Validators.min(1000000000), Validators.max(9999999999)]),
       email:new FormControl(null, [Validators.required]),
       batch:new FormControl(null, [Validators.required]),
+      address:new FormGroup(
+        {
+          city: new FormControl(),
+          pin:new FormControl(null, [Validators.required, Validators.min(100000), Validators.max(999999)])
+        }
+      )
 
 
     }

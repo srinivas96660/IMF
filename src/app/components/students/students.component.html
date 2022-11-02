@@ -6,9 +6,6 @@
             <p *ngIf="studentForm.get('name')?.errors?.['required']">This Field required</p>
             <p *ngIf="studentForm.get('name')?.errors?.['minlength']">min 3 char are required</p>
             <p *ngIf="studentForm.get('name')?.errors?.['maxlength']">max 10 char are required</p>
-
-
-
         </div>
         <br>
         <br>
@@ -21,13 +18,37 @@
         <br>
         <label>Mobile:</label >
         <input type="number" placeholder="Mobile" formControlName="mobile">
+        <div class="error" *ngIf="studentForm.get('mobile')?.touched && studentForm.get('mobile')?.invalid">
+            <p *ngIf="studentForm.get('mobile')?.errors?.['required']">This Field required</p>
+            <p *ngIf="studentForm.get('mobile')?.errors?.['min']">min 3 digits are required</p>
+            <p *ngIf="studentForm.get('mobile')?.errors?.['max']">max 10 digits are required</p>
+        </div>
         <br>
         <br>
         <label>Emaiil:</label>
         <input type="email" placeholder="Email" formControlName="email">
+        <div class="error" *ngIf="studentForm.get('email')?.touched && studentForm.get('email')?.invalid">
+            <p *ngIf="studentForm.get('email')?.errors?.['required']">This Field required</p>
+        </div>
         <br>
         <br>
         <label>Batch:</label>
         <input type="text" placeholder="Batch" formControlName="batch">
+        <div class="error" *ngIf="studentForm.get('batch')?.touched && studentForm.get('batch')?.invalid">
+            <p *ngIf="studentForm.get('batch')?.errors?.['required']">This Field required</p>
+        </div>
+        <h3>Address</h3>
+        <div formGroupName="address">
+            <label>City:</label>
+            <input type="text" placeholder="city" formControlName="city">
+            <br>
+            <label>pin</label>
+            <input type="number" placeholder="pin" formControlName="pin">
+            <div *ngIf="studentForm.get('address')?.get('pin')?.touched && studentForm.get('address')?.get('pin')?.invalid">
+                <p *ngIf="studentForm.get('address')?.get('pin')?.errors?.['required']">This filed required</p>
+                <p *ngIf="studentForm.get('address')?.get('pin')?.errors?.['min']">min 6 digits required</p>
+                <p *ngIf="studentForm.get('address')?.get('pin')?.errors?.['max']">max 6 digits required</p>
+            </div>
+        </div>
     </form>
 </div>
