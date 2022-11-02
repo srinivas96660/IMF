@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { Pagenotfound404pageComponent } from './components/pagenotfound404page/pagenotfound404page.component';
+import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -13,10 +15,19 @@ import { Pagenotfound404pageComponent } from './components/pagenotfound404page/p
     LoginComponent,
     DashboardComponent,
     Pagenotfound404pageComponent
+   
+   
+    
+   
+ 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

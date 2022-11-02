@@ -21,3 +21,6 @@
 button{
     width: 240px;
 }
+.error{
+    color: red;
+}

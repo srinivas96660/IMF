@@ -1,21 +1,29 @@
 <div class="container">
     <div class="col-12 col-sm-6 col-md-3">
-    <form class="form-control" id="lg">
-        
-    <h2>Login Form</h2>
-<br>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-        </div>
-        <br>
-      
-        <div class="form-group">
-            <label for="pwd">Password:</label>
-            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
-        </div>
-        <br>
-        <button class="btn btn-primary btn-block">Login</button>
-    </form>
-</div>
+        <form  [formGroup]='login' class="form-control" id="lg" >
+
+            <h2>Login Form</h2>
+            <br>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter email" name="email">
+                <div class="error" *ngIf="login.get('email')?.touched && login.get('email')?.invalid">
+                    <p *ngIf="login.get('email')?.errors?.['required']">This Fileld Is required</p>
+
+                </div>
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" formControlName="password" placeholder="Enter password" name="pswd">
+                <div class="error" *ngIf="login.get('password')?.touched && login.get('password')?.invalid">
+                    <p *ngIf="login.get('password')?.errors?.['required']">This is field is required</p>
+                </div>
+                
+            </div>
+            <br>
+            <button class=" btn btn-primary">Login</button>
+        </form>
+    </div>
 </div>
