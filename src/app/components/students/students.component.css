@@ -32,3 +32,6 @@ p{
     margin: 0px 60px 0px 60px;
     text-align: center;
 }
+button{
+    border-radius: 10px;
+}
