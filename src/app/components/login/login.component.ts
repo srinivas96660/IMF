@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
 login(){
   this.loginServices.login(this.loginform.value).subscribe(
     (data:any)=>{
+      sessionStorage.setItem('my-app-token', data.token)
       this.router.navigateByUrl("/dashboard");
     },
     (err:any)=>{
