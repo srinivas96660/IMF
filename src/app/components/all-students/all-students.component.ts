@@ -11,6 +11,7 @@ export class AllStudentsComponent implements OnInit {
   public students:any=[];
   public column:string='';
   public order:string='';
+  public term:string='';
 
   constructor(private studentservices:StudentService) {
 
@@ -46,6 +47,17 @@ export class AllStudentsComponent implements OnInit {
       }
     )
     
+   }
+   filter(){
+    this.studentservices.getFilterStudents(this.term).subscribe(
+      (data:any)=>{
+        this.students=data;
+      },
+      (err:any)=>{
+        alert("intenal server error")
+      }
+
+    )
    }
 
   ngOnInit(): void {

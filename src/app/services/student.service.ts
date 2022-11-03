@@ -19,4 +19,7 @@ export class StudentService {
   getSortedStudents(column:string, order:string):Observable<any>{
     return this._httpClient.get("https://62b9299dff109cd1dc8ca34f.mockapi.io/students?sortedBy="+column+ '&order='+order);
   }
+  getFilterStudents(term:string):Observable<any>{
+    return this._httpClient.get("https://62b9299dff109cd1dc8ca34f.mockapi.io/students?filter="+term);
+  }
 }
