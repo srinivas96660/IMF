@@ -9,6 +9,8 @@ import { StudentService } from 'src/app/services/student.service';
 export class AllStudentsComponent implements OnInit {
 
   public students:any=[];
+  public column:string='';
+  public order:string='';
 
   constructor(private studentservices:StudentService) {
 
@@ -28,11 +30,22 @@ export class AllStudentsComponent implements OnInit {
       (data:any)=>{
         this.students=data;
       },
-      (data:any)=>{
+      (err:any)=>{
         alert("internal server error")
       }
     )
 
+   }
+   sort(){
+    this.studentservices.getSortedStudents(this.column, this.order).subscribe(
+      (data:any)=>{
+        this.students=data;
+      },
+      (err:any)=>{
+        alert("Internal Server Error")
+      }
+    )
+    
    }
 
   ngOnInit(): void {

@@ -16,4 +16,7 @@ export class StudentService {
   getPagedStudents(page:number):Observable<any>{
     return this._httpClient.get("https://62b9299dff109cd1dc8ca34f.mockapi.io/students?limit=10&page="+page)
   }
+  getSortedStudents(column:string, order:string):Observable<any>{
+    return this._httpClient.get("https://62b9299dff109cd1dc8ca34f.mockapi.io/students?sortedBy="+column+ '&order='+order);
+  }
 }

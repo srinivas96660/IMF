@@ -1,7 +1,39 @@
+<div class="sorting">
+    <select [(ngModel)]="column">
+        <option>createdAt</option>
+        <option>name</option>
+        <option>avatar</option>
+        <option>id</option>
+        <option>gender</option>
+        <option>mobile</option>
+        <option>email</option>
+        <option>batch</option>
+        <option>city</option>
+        <option>mandal</option>
+        <option>district</option>
+        <option>pincode</option>
+        <option>qualification</option>
+        <option>year</option>
+        <option>location</option>
+        <option>package</option>
+        <option>offerDate</option>
+    </select>
+</div>
+<br>
+<div class="head" >
+    <select [(ngModel)]="order">
+        <option>asc</option>
+        <option>desc</option>
+
+    </select>
+</div>
+<br>
+<button class="btn btn-primary" (click)="sort()">Sorting</button>
+<br>
 <table class="table table-dark table-bordered table-hover table-primary">
     <thead>
         <tr>
-            <th>createdAt:</th>
+            <th>createdAt</th>
             <th>name:</th>
             <th>avatar:</th>
             <th>id:</th>
