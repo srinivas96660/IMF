@@ -9,7 +9,8 @@ import { Pagenotfound404pageComponent } from './components/pagenotfound404page/p
 import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { StudentsComponent } from './components/students/students.component';
-import { AllStudentsComponent } from './components/all-students/all-students.component'
+import { AllStudentsComponent } from './components/all-students/all-students.component';
+import { StudentDetailsComponent } from './components/student-details/student-details.component'
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { AllStudentsComponent } from './components/all-students/all-students.com
     DashboardComponent,
     Pagenotfound404pageComponent,
     StudentsComponent,
-    AllStudentsComponent
+    AllStudentsComponent,
+    StudentDetailsComponent
    
    
     

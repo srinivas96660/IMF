@@ -1,0 +1,32 @@
+<div class="main">
+    <form [formGroup]="studentForm">
+        <label>Name:</label>
+        <input type="text" placeholder="Name" formControlName="name">
+        <br>
+        <label>Mobile:</label>
+        <input type="number" placeholder="Mobile" formControlName="mobile">
+        <br>
+        <label>Emaiil:</label>
+        <input type="email" placeholder="Email" formControlName="email">
+        <br>
+        <label>Batch:</label>
+        <input type="date" placeholder="Batch" formControlName="batch">
+        <br>
+        <label>City:</label>
+        <input type="text" placeholder="city" formControlName="city">
+        <br>
+        <label>Mandal:</label>
+        <input type="text" placeholder="Mandal" formControlName="mandal">
+        <br>
+        <label>District:</label>
+        <input type="text" placeholder="District" formControlName="district">
+        <br>
+        <label>State:</label>
+        <input type="text" placeholder="state" formControlName="state">
+        <br>
+        <label>pin</label>
+        <input type="number" placeholder="pin" formControlName="pin">
+        <br>
+    </form>
+    <button (click)="submit()">Submit</button>
+</div>
