@@ -22,6 +22,18 @@ export class AllStudentsComponent implements OnInit {
     )
 
    }
+   pagination(page:number){
+
+    this.studentservices.getPagedStudents(page).subscribe(
+      (data:any)=>{
+        this.students=data;
+      },
+      (data:any)=>{
+        alert("internal server error")
+      }
+    )
+
+   }
 
   ngOnInit(): void {
   }

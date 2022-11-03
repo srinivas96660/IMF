@@ -1,4 +1,4 @@
-<table class="table table-sucess">
+<table class="table table-dark table-bordered table-hover table-primary">
     <thead>
         <tr>
             <th>createdAt:</th>
@@ -10,7 +10,7 @@
             <th>email:</th>
             <th>batch:</th>
             <th>city:</th>
-            <th>mandal  :</th>
+            <th>mandal:</th>
             <th>district:</th>
             <th>pincode:</th>
             <th>qualification:</th>
@@ -18,6 +18,8 @@
             <th>location:</th>
             <th>package:</th>
             <th>offerDate:</th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -42,6 +44,18 @@
             <td>{{student.company.package}}</td>
             <td>{{student.company.offerDate}}</td>
             <td>{{student.sourceType}}</td>
+            <td>
+                <button class="btn btn-primary">View</button>
+            </td>
+            <td>
+                <button class="btn btn-danger">Delete</button>
+            </td>
+
         </tr>
     </tbody>
 </table>
+<ul class="pagination">
+    <li class="page-item" (click)="pagination(1)"><a class="page-link" >1</a></li>
+    <li class="page-item" (click)="pagination(2)"><a class="page-link" >2</a></li>
+    <li class="page-item" (click)="pagination(3)"><a class="page-link" >3</a></li>
+  </ul> 
